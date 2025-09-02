@@ -1,24 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 
 const DashboardBuyer: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>("");
-
   const btnStyle: React.CSSProperties = {
-    padding: "12px 20px",
+    width: "100%",
+    padding: "20px",
     border: "none",
-    borderRadius: "8px",
+    borderRadius: "12px",
     backgroundColor: "#FF9800",
     color: "white",
-    fontSize: "16px",
+    fontSize: "20px",
+    fontWeight: "bold",
     cursor: "pointer",
+    marginBottom: "20px",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+    transition: "all 0.3s ease",
   };
 
-  const actionBtn: React.CSSProperties = {
-    padding: "10px 16px",
-    margin: "6px",
-    borderRadius: "8px",
-    border: "1px solid #ccc",
-    cursor: "pointer",
+  const placeholderBox: React.CSSProperties = {
+    marginTop: "15px",
+    height: "120px",
+    border: "2px dashed #bbb",
+    borderRadius: "10px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#666",
+    fontSize: "16px",
+    backgroundColor: "rgba(255,255,255,0.7)",
   };
 
   return (
@@ -27,87 +35,67 @@ const DashboardBuyer: React.FC = () => {
         minHeight: "100vh",
         padding: "40px",
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-        backgroundImage:
-          "url('https://static.vecteezy.com/system/resources/previews/003/133/843/non_2x/shopping-boy-and-buyer-vector.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundColor: "#f9fafb",
       }}
     >
-      <h1 style={{ marginBottom: "30px" }}>🛒 Buyer Dashboard</h1>
+      {/* Title */}
+      <h1 style={{ marginBottom: "20px", color: "#e65100" }}>
+        🛒 Buyer Dashboard
+      </h1>
 
-      {/* Navigation Buttons */}
-      <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-        <button style={btnStyle} onClick={() => setActiveTab("market")}>
-          Browse Market
-        </button>
-        <button style={btnStyle} onClick={() => setActiveTab("viewCrops")}>
-          View Crops
-        </button>
-        <button style={btnStyle} onClick={() => setActiveTab("orders")}>
-          My Orders
-        </button>
-        <button style={btnStyle} onClick={() => setActiveTab("profile")}>
-          Profile
-        </button>
-        <button style={btnStyle} onClick={() => setActiveTab("advice")}>
-          Get Advice
-        </button>
-      </div>
-
-      {/* Content Area */}
-      <div
+      {/* Centered Image */}
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/003/133/843/non_2x/shopping-boy-and-buyer-vector.jpg"
+        alt="Buyer Cartoon"
         style={{
-          marginTop: "30px",
-          backgroundColor: "rgba(255,255,255,0.9)",
-          padding: "20px",
-          borderRadius: "12px",
+          width: "250px",
+          height: "250px",
+          objectFit: "contain",
+          marginBottom: "30px",
         }}
-      >
-        {activeTab === "market" && (
-          <div>
-            <h2>Market</h2>
-            <button style={actionBtn}>Buy Crop</button>
-            <button style={actionBtn}>Add to Wishlist</button>
-          </div>
-        )}
+      />
 
-        {activeTab === "viewCrops" && (
-          <div>
-            <h2>Available Crops</h2>
-            <button style={actionBtn}>View Details</button>
-            <button style={actionBtn}>Add to Cart</button>
-          </div>
-        )}
+      {/* Options Section */}
+      <div style={{ width: "100%", maxWidth: "600px" }}>
+        {/* Market */}
+        <button style={btnStyle}>🛍️ Browse Market</button>
+        <div style={placeholderBox}>
+       
+        </div>
 
-        {activeTab === "orders" && (
-          <div>
-            <h2>My Orders</h2>
-            <button style={actionBtn}>Track Order</button>
-            <button style={actionBtn}>Cancel Order</button>
-          </div>
-        )}
+        {/* View Crops */}
+        <button style={btnStyle}>🌱 View Crops</button>
+        <div style={placeholderBox}>
+       
+        </div>
 
-        {activeTab === "profile" && (
-          <div>
-            <h2>Profile</h2>
-            <button style={actionBtn}>Edit Profile</button>
-            <button style={actionBtn}>Change Password</button>
-          </div>
-        )}
+        {/* Orders */}
+        <button style={btnStyle}>📦 My Orders</button>
+        <div style={placeholderBox}>
+       
+        </div>
 
-        {activeTab === "advice" && (
-          <div>
-            <h2>Advice</h2>
-            <button style={actionBtn}>Recommended Crops</button>
-            <button style={actionBtn}>View Crop Tips</button>
-          </div>
-        )}
+        {/* Profile */}
+        <button style={btnStyle}>👤 Profile</button>
+        <div style={placeholderBox}>
+      
+        </div>
+
+        {/* Advice */}
+        <button style={btnStyle}>💡 Get Advice</button>
+        <div style={placeholderBox}>
+       
+        </div>
       </div>
     </div>
   );
 };
 
 export default DashboardBuyer;
+
 
 
 

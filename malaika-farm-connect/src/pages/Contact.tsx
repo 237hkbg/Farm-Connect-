@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
       <div style={{ marginTop: "40px", textAlign: "center" }}>
         <h3>Other ways to reach us:</h3>
         <p>Email: support@farmconnect.com</p>
-        <p>Phone: +237 699 123 456</p>
+        <p>Phone: +237 678 28 85 90</p>
         <p>Address: Yaoundé, Cameroon</p>
       </div>
     </div>

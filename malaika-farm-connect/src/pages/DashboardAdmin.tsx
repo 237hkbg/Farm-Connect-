@@ -1,24 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 
 const DashboardAdmin: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>("");
-
   const btnStyle: React.CSSProperties = {
-    padding: "12px 20px",
+    width: "100%",
+    padding: "20px",
     border: "none",
-    borderRadius: "8px",
+    borderRadius: "12px",
     backgroundColor: "#28a745",
     color: "white",
-    fontSize: "16px",
+    fontSize: "20px",
+    fontWeight: "bold",
     cursor: "pointer",
+    marginBottom: "20px",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+    transition: "all 0.3s ease",
   };
 
-  const actionBtn: React.CSSProperties = {
-    padding: "10px 16px",
-    margin: "6px",
-    borderRadius: "8px",
-    border: "1px solid #ccc",
-    cursor: "pointer",
+  const placeholderBox: React.CSSProperties = {
+    marginTop: "15px",
+    height: "120px",
+    border: "2px dashed #bbb",
+    borderRadius: "10px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#666",
+    fontSize: "16px",
+    backgroundColor: "rgba(255,255,255,0.7)",
   };
 
   return (
@@ -27,87 +35,67 @@ const DashboardAdmin: React.FC = () => {
         minHeight: "100vh",
         padding: "40px",
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-        backgroundImage:
-          "url('https://www.kindpng.com/picc/m/456-4565189_administration-cartoon-png-transparent-png.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundColor: "#f9fafb",
       }}
     >
-      <h1 style={{ marginBottom: "30px" }}>👑 Admin Dashboard</h1>
+      {/* Title */}
+      <h1 style={{ marginBottom: "20px", color: "#155724" }}>
+        👑 Admin Dashboard
+      </h1>
 
-      {/* Navigation Buttons */}
-      <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-        <button style={btnStyle} onClick={() => setActiveTab("viewCrops")}>
-          View All Crops
-        </button>
-        <button style={btnStyle} onClick={() => setActiveTab("addCrop")}>
-          Add Crop
-        </button>
-        <button style={btnStyle} onClick={() => setActiveTab("manageUsers")}>
-          Manage Users
-        </button>
-        <button style={btnStyle} onClick={() => setActiveTab("reports")}>
-          View Reports
-        </button>
-        <button style={btnStyle} onClick={() => setActiveTab("settings")}>
-          Site Settings
-        </button>
-      </div>
-
-      {/* Content Panels */}
-      <div
+      {/* Centered Image */}
+      <img
+        src="https://www.kindpng.com/picc/m/456-4565189_administration-cartoon-png-transparent-png.png"
+        alt="Admin Cartoon"
         style={{
-          marginTop: "30px",
-          backgroundColor: "rgba(255,255,255,0.9)",
-          padding: "20px",
-          borderRadius: "12px",
+          width: "250px",
+          height: "250px",
+          objectFit: "contain",
+          marginBottom: "30px",
         }}
-      >
-        {activeTab === "viewCrops" && (
-          <div>
-            <h2>All Crops</h2>
-            <button style={actionBtn}>Approve Crop 1</button>
-            <button style={actionBtn}>Delete Crop 1</button>
-          </div>
-        )}
+      />
 
-        {activeTab === "addCrop" && (
-          <div>
-            <h2>Add Crop</h2>
-            <input type="text" placeholder="Enter crop name" />
-            <button style={actionBtn}>Upload Crop</button>
-          </div>
-        )}
+      {/* Options Section */}
+      <div style={{ width: "100%", maxWidth: "600px" }}>
+        {/* View Crops */}
+        <button style={btnStyle}>🌱 View All Crops</button>
+        <div style={placeholderBox}>
+       
+        </div>
 
-        {activeTab === "manageUsers" && (
-          <div>
-            <h2>Manage Users</h2>
-            <button style={actionBtn}>Approve User</button>
-            <button style={actionBtn}>Remove User</button>
-          </div>
-        )}
+        {/* Add Crop */}
+        <button style={btnStyle}>➕ Add Crop</button>
+        <div style={placeholderBox}>
+       
+        </div>
 
-        {activeTab === "reports" && (
-          <div>
-            <h2>Reports</h2>
-            <button style={actionBtn}>View Sales Report</button>
-            <button style={actionBtn}>View Users Report</button>
-          </div>
-        )}
+        {/* Manage Users */}
+        <button style={btnStyle}>👥 Manage Users</button>
+        <div style={placeholderBox}>
+       
+        </div>
 
-        {activeTab === "settings" && (
-          <div>
-            <h2>Site Settings</h2>
-            <button style={actionBtn}>Update Profile</button>
-            <button style={actionBtn}>Change Password</button>
-          </div>
-        )}
+        {/* Reports */}
+        <button style={btnStyle}>📊 View Reports</button>
+        <div style={placeholderBox}>
+       
+        </div>
+
+        {/* Settings */}
+        <button style={btnStyle}>⚙️ Site Settings</button>
+        <div style={placeholderBox}>
+       
+        </div>
       </div>
     </div>
   );
 };
 
 export default DashboardAdmin;
+
 
 
 
