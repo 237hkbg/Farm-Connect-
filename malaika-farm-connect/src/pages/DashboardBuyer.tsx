@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const DashboardBuyer: React.FC = () => {
+  const navigate = useNavigate();
+
   const btnStyle: React.CSSProperties = {
     width: "100%",
     padding: "20px",
@@ -16,19 +19,6 @@ const DashboardBuyer: React.FC = () => {
     transition: "all 0.3s ease",
   };
 
-  const placeholderBox: React.CSSProperties = {
-    marginTop: "15px",
-    height: "120px",
-    border: "2px dashed #bbb",
-    borderRadius: "10px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "#666",
-    fontSize: "16px",
-    backgroundColor: "rgba(255,255,255,0.7)",
-  };
-
   return (
     <div
       style={{
@@ -38,70 +28,38 @@ const DashboardBuyer: React.FC = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: "#f9fafb",
+        backgroundImage:
+          "url('https://static.vecteezy.com/system/resources/previews/003/133/843/non_2x/shopping-boy-and-buyer-vector.jpg')",
+        backgroundSize: "auto 50%", // Medium height
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "left center", // Left-aligned
       }}
     >
-      {/* Title */}
       <h1 style={{ marginBottom: "20px", color: "#e65100" }}>
         🛒 Buyer Dashboard
       </h1>
 
-      {/* Centered Image */}
-      <img
-        src="https://static.vecteezy.com/system/resources/previews/003/133/843/non_2x/shopping-boy-and-buyer-vector.jpg"
-        alt="Buyer Cartoon"
-        style={{
-          width: "250px",
-          height: "250px",
-          objectFit: "contain",
-          marginBottom: "30px",
-        }}
-      />
-
-      {/* Options Section */}
-      <div style={{ width: "100%", maxWidth: "600px" }}>
-        {/* Market */}
-        <button style={btnStyle}>🛍️ Browse Market</button>
-        <div style={placeholderBox}>
-       
-        </div>
-
-        {/* View Crops */}
-        <button style={btnStyle}>🌱 View Crops</button>
-        <div style={placeholderBox}>
-       
-        </div>
-
-        {/* Orders */}
-        <button style={btnStyle}>📦 My Orders</button>
-        <div style={placeholderBox}>
-       
-        </div>
-
-        {/* Profile */}
-        <button style={btnStyle}>👤 Profile</button>
-        <div style={placeholderBox}>
-      
-        </div>
-
-        {/* Advice */}
-        <button style={btnStyle}>💡 Get Advice</button>
-        <div style={placeholderBox}>
-       
-        </div>
+      <div style={{ width: "100%", maxWidth: "400px" }}>
+        <button style={btnStyle} onClick={() => navigate("/BuyerMarket")}>
+          🛍️ Browse Market
+        </button>
+        <button style={btnStyle} onClick={() => navigate("/BuyerViewCrops")}>
+          🌱 View Crops
+        </button>
+        <button style={btnStyle} onClick={() => navigate("/BuyerOrders")}>
+          📦 My Orders
+        </button>
+        <button style={btnStyle} onClick={() => navigate("/BuyerProfile")}>
+          👤 Profile
+        </button>
+        <button style={btnStyle} onClick={() => navigate("/BuyerAdvice")}>
+          💡 Get Advice
+        </button>
       </div>
     </div>
   );
 };
 
 export default DashboardBuyer;
-
-
-
-
-
-
-
-
 
 
