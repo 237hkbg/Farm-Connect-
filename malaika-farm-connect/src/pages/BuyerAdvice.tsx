@@ -2,11 +2,15 @@ import React from "react";
 
 const BuyerAdvice: React.FC = () => {
   return (
-    <div style={{ padding: "40px", textAlign: "center" }}>
-      <h1>Advice</h1>
-      <p>System will advise buyers on which crops to buy.</p>
+    <div style={{ padding: "40px" }}>
+      <h1>💡 Farming Advice</h1>
+      <p>No advice available yet.</p>
+      <button style={{ padding: "10px 20px", marginTop: "20px" }}>
+        Request Advice
+      </button>
     </div>
   );
 };
 
 export default BuyerAdvice;
+

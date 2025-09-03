@@ -12,6 +12,7 @@ import ManageUsers from "./pages/ManageUsers";
 import Reports from "./pages/Reports";
 import SiteSettings from "./pages/SiteSettings";
 import AdminViewCrops from "./pages/AdminViewCrops";
+import ManageCrops from "./pages/ManageCrops"; // ✅ added ManageCrops
 
 // Seller Pages
 import SellerAddCrop from "./pages/SellerAddCrops";
@@ -26,6 +27,7 @@ import BuyerViewCrops from "./pages/BuyerViewCrops";
 import BuyerOrders from "./pages/BuyerOrders";
 import BuyerProfile from "./pages/BuyerProfile";
 import BuyerAdvice from "./pages/BuyerAdvice";
+import BuyerPayment from "./pages/BuyerPayment"; // ✅ added BuyerPayment
 
 // Other Pages
 import Home from "./pages/Home";
@@ -55,6 +57,7 @@ const App: React.FC = () => {
             <Route path="/dashboard-admin" element={<DashboardAdmin />} />
 
             {/* Admin Pages */}
+            <Route path="/ManageCrops" element={<ManageCrops />} /> {/* ✅ ManageCrops */}
             <Route path="/ManageUsers" element={<ManageUsers />} />
             <Route path="/Reports" element={<Reports />} />
             <Route path="/SiteSettings" element={<SiteSettings />} />
@@ -73,6 +76,7 @@ const App: React.FC = () => {
             <Route path="/BuyerOrders" element={<BuyerOrders />} />
             <Route path="/BuyerProfile" element={<BuyerProfile />} />
             <Route path="/BuyerAdvice" element={<BuyerAdvice />} />
+            <Route path="/BuyerPayment" element={<BuyerPayment />} /> {/* ✅ BuyerPayment */}
 
             {/* Other Pages */}
             <Route path="/contact" element={<Contact />} />
@@ -85,6 +89,8 @@ const App: React.FC = () => {
 };
 
 export default App;
+
+
 
 
 

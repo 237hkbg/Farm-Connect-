@@ -27,24 +27,22 @@ const DashboardAdmin: React.FC = () => {
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignItems: "center", // Center align options
+        justifyContent: "center",
         backgroundImage:
           "url('https://www.kindpng.com/picc/m/456-4565189_administration-cartoon-png-transparent-png.png')",
-        backgroundSize: "auto 50%", // Medium size
+        backgroundSize: "40% auto", // Medium size
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "left center", // Align left
+        backgroundPosition: "left center", // Image on the left
       }}
     >
-      <h1 style={{ marginBottom: "20px", color: "#155724" }}>
+      <h1 style={{ marginBottom: "40px", color: "#155724" }}>
         👑 Admin Dashboard
       </h1>
 
       <div style={{ width: "100%", maxWidth: "400px" }}>
-        <button style={btnStyle} onClick={() => navigate("/AdminViewCrops")}>
-          🌱 View All Crops
-        </button>
-        <button style={btnStyle} onClick={() => navigate("/AddCrop")}>
-          ➕ Add Crop
+        <button style={btnStyle} onClick={() => navigate("/ManageCrops")}>
+          🌱 Manage Crops
         </button>
         <button style={btnStyle} onClick={() => navigate("/ManageUsers")}>
           👥 Manage Users
@@ -61,30 +59,5 @@ const DashboardAdmin: React.FC = () => {
 };
 
 export default DashboardAdmin;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
