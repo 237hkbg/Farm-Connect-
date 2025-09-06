@@ -9,11 +9,11 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.126",
-    "@types/react": "^19.1.12",
-    "@types/react-dom": "^19.1.9",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "react-router-dom": "^7.8.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.28.0",
     "react-scripts": "^5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
@@ -42,7 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@types/react-router-dom": "^5.3.3"
-  }
+  "devDependencies": {}
 }

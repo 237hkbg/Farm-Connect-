@@ -5,7 +5,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 const BuyerPayment: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const action = (location.state as { action?: string })?.action;
+  const stateAction = (location.state as { action?: string } | undefined)?.action;
+  const qp = new URLSearchParams(location.search);
+  const qpAction = qp.get("action") || undefined;
+  const action = stateAction || qpAction || "order"; // default to order flow
 
   const handlePayment = () => {
     if (action === "buy-now") {

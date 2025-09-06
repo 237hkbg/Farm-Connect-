@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 const Login: React.FC = () => {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(true); // toggle between login/register
-  const [role, setRole] = useState("buyer");
+  type Role = "buyer" | "farmer" | "admin";
+  const [role, setRole] = useState<Role>("buyer");
 
   // Login state
   const [loginEmail, setLoginEmail] = useState("");
@@ -20,7 +21,7 @@ const Login: React.FC = () => {
     e.preventDefault();
     // Redirect to the correct dashboard based on role
     if (role === "buyer") navigate("/dashboard-buyer");
-    else if (role === "Farmer") navigate("/dashboard-Farmer");
+    else if (role === "farmer") navigate("/dashboard-Farmer");
     else navigate("/dashboard-admin");
   };
 
@@ -32,7 +33,7 @@ const Login: React.FC = () => {
     }
     // After registration, redirect to dashboard
     if (role === "buyer") navigate("/dashboard-buyer");
-    else if (role === "Farmer") navigate("/dashboard-Farmer");
+    else if (role === "farmer") navigate("/dashboard-Farmer");
     else navigate("/dashboard-admin");
   };
 
@@ -98,11 +99,11 @@ const Login: React.FC = () => {
               Role:
               <select
                 value={role}
-                onChange={(e) => setRole(e.target.value)}
+                onChange={(e) => setRole(e.target.value.toLowerCase() as Role)}
                 style={{ width: "100%", padding: "8px", marginTop: "5px", borderRadius: "6px", border: "1px solid #ccc" }}
               >
                 <option value="buyer">Buyer</option>
-                <option value="Farmer">Farmer</option>
+                <option value="farmer">Farmer</option>
                 <option value="admin">Admin</option>
               </select>
             </label>
@@ -152,11 +153,11 @@ const Login: React.FC = () => {
               Role:
               <select
                 value={role}
-                onChange={(e) => setRole(e.target.value)}
+                onChange={(e) => setRole(e.target.value.toLowerCase() as Role)}
                 style={{ width: "100%", padding: "8px", marginTop: "5px", borderRadius: "6px", border: "1px solid #ccc" }}
               >
                 <option value="buyer">Buyer</option>
-                <option value="Farmer">Farmer</option>
+                <option value="farmer">Farmer</option>
                 <option value="admin">Admin</option>
               </select>
             </label>
