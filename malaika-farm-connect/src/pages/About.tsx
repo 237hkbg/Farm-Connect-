@@ -12,7 +12,7 @@ const About: React.FC = () => {
     >
       <h1 style={{ textAlign: "center", marginBottom: "30px" }}>🌱 About FarmConnect</h1>
       <p style={{ maxWidth: "800px", margin: "0 auto 20px auto", lineHeight: "1.6" }}>
-        FarmConnect is a digital platform designed to connect farmers, sellers, and buyers efficiently. 
+        FarmConnect is a digital platform designed to connect farmers and buyers efficiently. 
         Our goal is to simplify agricultural trading, improve access to fresh crops, and provide guidance for both farmers and consumers.
       </p>
       <p style={{ maxWidth: "800px", margin: "0 auto 20px auto", lineHeight: "1.6" }}>
