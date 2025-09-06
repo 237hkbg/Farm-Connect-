@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 
 // Dashboards
 import DashboardBuyer from "./pages/DashboardBuyer";
-import DashboardSeller from "./pages/DashboardSeller";
+import DashboardFarmer from "./pages/DashboardFarmer";
 import DashboardAdmin from "./pages/DashboardAdmin";
 
 // Admin Pages
@@ -15,11 +15,11 @@ import AdminViewCrops from "./pages/AdminViewCrops";
 import ManageCrops from "./pages/ManageCrops"; // ✅ added ManageCrops
 
 // Seller Pages
-import SellerAddCrop from "./pages/SellerAddCrops";
-import SellerViewCrops from "./pages/SellerViewCrops";
-import SellerOrders from "./pages/SellerOrders";
-import SellerEarnings from "./pages/SellerEarnings";
-import SellerSettings from "./pages/SellerSettings";
+import FarmerAddCrops from "./pages/FarmerAddCrops";
+import FarmerViewCrops from "./pages/FarmerViewCrops";
+import FarmerOrders from "./pages/FarmerOrders";
+import FarmerEarnings from "./pages/FarmerEarnings";
+import FarmerSettings from "./pages/FarmerSettings";
 
 // Buyer Pages
 import BuyerMarket from "./pages/BuyerMarket";
@@ -31,7 +31,6 @@ import BuyerPayment from "./pages/BuyerPayment"; // ✅ added BuyerPayment
 
 // Other Pages
 import Home from "./pages/Home";
-import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -48,12 +47,11 @@ const App: React.FC = () => {
           <Routes>
             {/* Landing Pages */}
             <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
 
             {/* Dashboards */}
             <Route path="/dashboard-buyer" element={<DashboardBuyer />} />
-            <Route path="/dashboard-seller" element={<DashboardSeller />} />
+            <Route path="/dashboard-Farmer" element={<DashboardFarmer />} />
             <Route path="/dashboard-admin" element={<DashboardAdmin />} />
 
             {/* Admin Pages */}
@@ -63,12 +61,12 @@ const App: React.FC = () => {
             <Route path="/SiteSettings" element={<SiteSettings />} />
             <Route path="/AdminViewCrops" element={<AdminViewCrops />} />
 
-            {/* Seller Pages */}
-            <Route path="/SellerAddCrop" element={<SellerAddCrop />} />
-            <Route path="/SellerViewCrops" element={<SellerViewCrops />} />
-            <Route path="/SellerOrders" element={<SellerOrders />} />
-            <Route path="/SellerEarnings" element={<SellerEarnings />} />
-            <Route path="/SellerSettings" element={<SellerSettings />} />
+            {/* Farmer Pages */}
+            <Route path="/FarmerAddCrops" element={<FarmerAddCrops />} />
+            <Route path="/FarmerViewCrops" element={<FarmerViewCrops />} />
+            <Route path="/FarmerOrders" element={<FarmerOrders />} />
+            <Route path="/FarmerEarnings" element={<FarmerEarnings />} />
+            <Route path="/FarmerSettings" element={<FarmerSettings />} />
 
             {/* Buyer Pages */}
             <Route path="/BuyerMarket" element={<BuyerMarket />} />

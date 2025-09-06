@@ -29,11 +29,6 @@ const DashboardAdmin: React.FC = () => {
         flexDirection: "column",
         alignItems: "center", // Center align options
         justifyContent: "center",
-        backgroundImage:
-          "url('https://www.kindpng.com/picc/m/456-4565189_administration-cartoon-png-transparent-png.png')",
-        backgroundSize: "40% auto", // Medium size
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "left center", // Image on the left
       }}
     >
       <h1 style={{ marginBottom: "40px", color: "#155724" }}>
@@ -59,5 +54,6 @@ const DashboardAdmin: React.FC = () => {
 };
 
 export default DashboardAdmin;
+
 
 

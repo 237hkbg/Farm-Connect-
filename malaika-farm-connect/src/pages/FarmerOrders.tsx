@@ -1,6 +1,6 @@
 import React from "react";
 
-const SellerOrders: React.FC = () => {
+const FarmerOrders: React.FC = () => {
   return (
     <div style={{ padding: "40px" }}>
       <h1>📦 Orders</h1>
@@ -25,5 +25,5 @@ const SellerOrders: React.FC = () => {
   );
 };
 
-export default SellerOrders;
+export default FarmerOrders;
 

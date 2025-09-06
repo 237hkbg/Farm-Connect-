@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const DashboardSeller: React.FC = () => {
+const DashboardFarmer: React.FC = () => {
   const navigate = useNavigate();
 
   const btnStyle: React.CSSProperties = {
@@ -28,31 +28,26 @@ const DashboardSeller: React.FC = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundImage:
-          "url('https://t4.ftcdn.net/jpg/08/13/64/07/360_F_813640771_s55b6SnRLsf2mrm0ebnlhmOuLY6o0uIj.jpg')",
-        backgroundSize: "auto 50%", // Medium height
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "left center", // Left-aligned
       }}
     >
-      <h1 style={{ marginBottom: "20px", color: "#1e3a8a" }}>
-        🛒 Seller Dashboard
+      <h1 style={{ marginBottom: "20px", color: "#0a0c12ff" }}>
+        🛒 Farmer Dashboard
       </h1>
 
       <div style={{ width: "100%", maxWidth: "400px" }}>
-        <button style={btnStyle} onClick={() => navigate("/SellerAddCrop")}>
+        <button style={btnStyle} onClick={() => navigate("/FarmerAddCrops")}>
           ➕ Add Crop
         </button>
-        <button style={btnStyle} onClick={() => navigate("/SellerViewCrops")}>
+        <button style={btnStyle} onClick={() => navigate("/FarmerViewCrops")}>
           🌱 View My Crops
         </button>
-        <button style={btnStyle} onClick={() => navigate("/SellerOrders")}>
+        <button style={btnStyle} onClick={() => navigate("/FarmerOrders")}>
           📦 Manage Orders
         </button>
-        <button style={btnStyle} onClick={() => navigate("/SellerEarnings")}>
+        <button style={btnStyle} onClick={() => navigate("/FarmerEarnings")}>
           💰 View Earnings
         </button>
-        <button style={btnStyle} onClick={() => navigate("/SellerSettings")}>
+        <button style={btnStyle} onClick={() => navigate("/FarmerSettings")}>
           ⚙️ Account Settings
         </button>
       </div>
@@ -60,6 +55,7 @@ const DashboardSeller: React.FC = () => {
   );
 };
 
-export default DashboardSeller;
+export default DashboardFarmer;
+
 
 

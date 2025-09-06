@@ -28,11 +28,6 @@ const DashboardBuyer: React.FC = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundImage:
-          "url('https://static.vecteezy.com/system/resources/previews/003/133/843/non_2x/shopping-boy-and-buyer-vector.jpg')",
-        backgroundSize: "auto 50%", // Medium height
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "left center", // Left-aligned
       }}
     >
       <h1 style={{ marginBottom: "20px", color: "#e65100" }}>
@@ -61,5 +56,6 @@ const DashboardBuyer: React.FC = () => {
 };
 
 export default DashboardBuyer;
+
 
 

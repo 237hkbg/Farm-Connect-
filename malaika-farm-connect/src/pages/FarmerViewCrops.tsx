@@ -1,6 +1,6 @@
 import React from "react";
 
-const SellerViewCrops: React.FC = () => {
+const FarmerViewCrops: React.FC = () => {
   return (
     <div style={{ padding: "40px" }}>
       <h1>🌱 My Crops</h1>
@@ -25,5 +25,5 @@ const SellerViewCrops: React.FC = () => {
   );
 };
 
-export default SellerViewCrops;
+export default FarmerViewCrops;
 

@@ -20,7 +20,7 @@ const Login: React.FC = () => {
     e.preventDefault();
     // Redirect to the correct dashboard based on role
     if (role === "buyer") navigate("/dashboard-buyer");
-    else if (role === "seller") navigate("/dashboard-seller");
+    else if (role === "Farmer") navigate("/dashboard-Farmer");
     else navigate("/dashboard-admin");
   };
 
@@ -32,7 +32,7 @@ const Login: React.FC = () => {
     }
     // After registration, redirect to dashboard
     if (role === "buyer") navigate("/dashboard-buyer");
-    else if (role === "seller") navigate("/dashboard-seller");
+    else if (role === "Farmer") navigate("/dashboard-Farmer");
     else navigate("/dashboard-admin");
   };
 
@@ -102,7 +102,7 @@ const Login: React.FC = () => {
                 style={{ width: "100%", padding: "8px", marginTop: "5px", borderRadius: "6px", border: "1px solid #ccc" }}
               >
                 <option value="buyer">Buyer</option>
-                <option value="seller">Seller</option>
+                <option value="Farmer">Farmer</option>
                 <option value="admin">Admin</option>
               </select>
             </label>
@@ -156,7 +156,7 @@ const Login: React.FC = () => {
                 style={{ width: "100%", padding: "8px", marginTop: "5px", borderRadius: "6px", border: "1px solid #ccc" }}
               >
                 <option value="buyer">Buyer</option>
-                <option value="seller">Seller</option>
+                <option value="Farmer">Farmer</option>
                 <option value="admin">Admin</option>
               </select>
             </label>

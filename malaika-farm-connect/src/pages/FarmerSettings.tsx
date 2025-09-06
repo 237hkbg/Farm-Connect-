@@ -1,6 +1,6 @@
 import React from "react";
 
-const SellerSettings: React.FC = () => {
+const FarmerSettings: React.FC = () => {
   return (
     <div style={{ padding: "40px" }}>
       <h1>⚙️ Account Settings</h1>
@@ -20,5 +20,5 @@ const SellerSettings: React.FC = () => {
   );
 };
 
-export default SellerSettings;
+export default FarmerSettings;
 
