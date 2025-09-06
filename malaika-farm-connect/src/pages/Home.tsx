@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       style={{
         width: "100vw",
         height: "100vh",
-        backgroundImage: `url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1920&q=80")`, // Full-screen farm landscape
+        backgroundImage: `url("https://images.unsplash.com/photo-1625246333195-78d9c38ad449?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFybWluZ3xlbnwwfHwwfHx8MA%3D%3D")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -89,6 +89,9 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+
+
 
 
 
