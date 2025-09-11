@@ -1,36 +1,47 @@
 const express = require('express');
 const cors = require('cors');
-//load env variables
 require('dotenv').config();
+const connectDB = require('./config/db');
+
 const app = express();
 const port = process.env.PORT || 5000;
 
-//Middleware
+// Connect to MongoDB
+connectDB();
+
+// Middleware
 app.use(cors({
-    origin: process.env.CORS_ORIGIN || '*', //Tighten this in production
-    methods: ['GET', 'POST', 'PUT','PATCH', 'DELETE', 'OPTIONS'],
+    origin: process.env.CORS_ORIGIN || '*',
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     credentials: true,
 }));
+app.use(express.json());
 
-
-//Health check endpoint
+// Health check
 app.get('/health', (req, res) => {
-    res.status(200).json({status: 'OK', uptime: process.uptime()});
+    res.status(200).json({ status: 'OK', uptime: process.uptime() });
 });
-// API routes would go here
-app.get('/api/message', (req, res) => {
-    res.json({message: 'Hello from the server!'});
-});
-//404 handler
+
+// Routes
+app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/products', require('./routes/productRoutes'));
+app.use('/api/rentals', require('./routes/rentalRoutes'));
+app.use('/api/tools', require('./routes/toolRoutes'));
+app.use('/api/prices', require('./routes/priceRoutes'));
+app.use('/api/auth', require('./routes/authRoutes'));
+
+// 404 handler
 app.use((req, res) => {
-    res.status(404).json({message: 'Not Found'});
+    res.status(404).json({ message: 'Not Found' });
 });
-//Global error handler
-app.use((err, req, res,next)=>{
-    console.error('server error:', err);
-    res.status(500).json({message: 'Internal Server Error'});
+
+// Global error handler
+app.use((err, req, res, next) => {
+    console.error('Server error:', err);
+    res.status(500).json({ message: 'Internal Server Error' });
 });
-// listen on port 5000
+
+// Start server
 app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+    console.log(`🚀 Server running on http://localhost:${port}`);
 });
