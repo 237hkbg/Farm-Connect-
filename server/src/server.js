@@ -29,6 +29,8 @@ app.use('/api/rentals', require('./routes/rentalRoutes'));
 app.use('/api/tools', require('./routes/toolRoutes'));
 app.use('/api/prices', require('./routes/priceRoutes'));
 app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/dashboard', require('./routes/dashboardRoutes'));
+app.use('/api/orders', require('./routes/orderRoutes'));
 
 // 404 handler
 app.use((req, res) => {
