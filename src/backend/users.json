@@ -4,5 +4,17 @@
     "email": "parfaitkamga070@gmail.com",
     "userType": "acheteur",
     "registeredAt": "2025-09-09T05:51:01.134Z"
+  },
+  {
+    "name": "malaika",
+    "email": "fezemalaika@gmail.com",
+    "userType": "acheteur",
+    "registeredAt": "2025-09-10T12:18:50.463Z"
+  },
+  {
+    "name": "malaika",
+    "email": "fezemalaika@gmail.com",
+    "userType": "agriculteur",
+    "registeredAt": "2025-09-10T12:19:55.449Z"
   }
 ]
