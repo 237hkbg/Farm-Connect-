@@ -203,7 +203,7 @@ export default function Register() {
                     >
                       <option value="farmer" className="bg-gray-800 text-white">Farmer</option>
                       <option value="buyer" className="bg-gray-800 text-white">Buyer</option>
-                      <option value="admin" className="bg-gray-800 text-white">Admin</option>
+                      <option value="admin" className="bg-gray-800 text-white">admin</option>
                     </select>
                     <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
                       <ArrowRight className="w-4 h-4 text-white/50 rotate-90" />
